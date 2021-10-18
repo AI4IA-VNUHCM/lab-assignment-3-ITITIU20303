@@ -14,7 +14,17 @@ Ex:
 
 void Ex2(int arr[], int n){
 	//Your codes here
-	
+	 for (int i = 0; i < n; i++)
+        if (arr[i] & 1) // Check for odd
+            arr[i] *= -1;
+ 
+    // Sort all numbers
+    sort(arr, arr + n);
+ 
+    // Retaining original array
+    for (int i = 0; i < n; i++)
+        if (arr[i] & 1)
+            arr[i] *= -1;
 }
 
 int main(int argc, char *argv[]) {
